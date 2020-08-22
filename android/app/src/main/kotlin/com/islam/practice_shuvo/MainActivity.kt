@@ -1,4 +1,4 @@
-package com.example.my_app
+package com.islam.practice_shuvo
 
 import io.flutter.embedding.android.FlutterActivity
 

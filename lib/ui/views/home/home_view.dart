@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_app/ui/views/home_view_model.dart';
+import 'package:practice_shuvo/ui/views/home/home_viewmodel.dart';
 import 'package:stacked/stacked.dart';
 
 class HomeView extends StatelessWidget {
@@ -8,11 +8,11 @@ class HomeView extends StatelessWidget {
     return ViewModelBuilder<HomeViewModel>.reactive(
         builder: (context,model,child)=>Scaffold(
           body: Center(
-            child: Text('${model.title} ${model.counter}'),
+            child: Text('${model.title} ${model.count}'),
           ),
           floatingActionButton: FloatingActionButton(
+            onPressed: model.updateCount,
             child: Icon(Icons.add,color: Colors.white,),
-            onPressed:model.updatedata,
           ),
         ),
         viewModelBuilder: ()=>HomeViewModel());
